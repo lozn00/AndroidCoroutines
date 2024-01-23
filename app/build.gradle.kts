@@ -17,6 +17,22 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+
+    flavorDimensions += listOf("channel", "version")
+    productFlavors {
+//        create("vip") {
+        val ver1 by creating {
+            dimension = "version"
+        }
+        val ver2 by creating {
+            dimension = "version"
+        }
+        val aa by creating {
+            dimension = "channel"
+        }
+
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
